@@ -1,0 +1,34 @@
+package com.Mansion.Mansion.Model;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "HABITACION")
+public class Habitacion {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_habitacion")
+    private Long idHabitacion;
+
+    @NotBlank(message = "La habitación debe tener un nombre")
+    private String nombre;
+
+    @NotBlank(message = "La descripción es necesaria para la ambientación")
+    private String descripcion;
+
+    @Column(name = "es_zona_segura")
+    private boolean esZonaSegura;
+}
