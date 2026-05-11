@@ -35,4 +35,5 @@ public class Objeto {
     @NotNull(message = "El valor base debe ser definido")
     @Min(value = 0, message = "El valor base no puede ser negativo")
     private Integer valorBase; /* Cuanto vale ese objeto en términos de valor de uso, inutil, valioso, necesario, herramienta para más tarde */
+
 }

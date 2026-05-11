@@ -62,4 +62,9 @@ public class Objetos {
         return dto;
     }
 
+    public Object getIdObjeto() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getIdObjeto'");
+    }
+
 }
